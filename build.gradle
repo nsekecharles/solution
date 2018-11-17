@@ -1,0 +1,22 @@
+group 'fnag-test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0',
+                'org.junit.jupiter:junit-jupiter-engine:5.2.0',
+                'org.junit.vintage:junit-vintage-engine:5.2.0',
+                'org.assertj:assertj-core:3.11.1',
+                'io.cucumber:cucumber-java:4.2.0',
+                'io.cucumber:cucumber-junit:4.2.0',
+                'org.assertj:assertj-core:3.6.2'
+}
