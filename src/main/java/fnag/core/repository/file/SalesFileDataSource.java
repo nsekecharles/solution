@@ -1,7 +1,8 @@
-package fnag.core;
+package fnag.core.repository.file;
 
 import fnag.core.product.Product;
 import fnag.core.product.ProductMapper;
+import fnag.core.repository.AnalysisDataSource;
 import fnag.core.sale.Sale;
 import fnag.core.sale.SaleMapper;
 
@@ -17,10 +18,12 @@ public class SalesFileDataSource implements AnalysisDataSource {
     public static final String PARAMETER_DELIMITER = "\\|";
     public static final int NUMBER_OF_PRODUCTS_MAX = 100;
     public static final int NUMBER_OF_SALES_MAX = 1000;
-    private List<Product> products = new ArrayList<>();
-    private List<Sale> sales = new ArrayList<>();
+
     private final ProductMapper productMapper = new ProductMapper();
     private final SaleMapper saleMapper = new SaleMapper();
+
+    private List<Product> products = new ArrayList<>();
+    private List<Sale> sales = new ArrayList<>();
 
     public SalesFileDataSource(String fileName) throws IOException {
         initializeData(fileName);

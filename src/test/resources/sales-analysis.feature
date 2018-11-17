@@ -9,7 +9,7 @@ Feature: analyse sales
     And a sale Lyon|Alice|T127|2
     And a sale Paris|Bob|T127|1
     And a sale Paris|Chuck|T127|1
-    When analyse sells
-    Then the analysis result should display
+    When analyse sales
+    Then the analyse result should display
     |TOPSALE\|T127\|T-shirt 'no place like 127.0.0.1'\|4|
     |TOPSELLER\|Lyon\|Alice\|229.98|

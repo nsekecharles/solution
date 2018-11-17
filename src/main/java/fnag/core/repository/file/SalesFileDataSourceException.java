@@ -1,4 +1,4 @@
-package fnag.core;
+package fnag.core.repository.file;
 
 public class SalesFileDataSourceException extends RuntimeException {
 

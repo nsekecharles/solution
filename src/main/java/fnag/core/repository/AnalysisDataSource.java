@@ -1,4 +1,4 @@
-package fnag.core;
+package fnag.core.repository;
 
 import fnag.core.product.Product;
 import fnag.core.sale.Sale;

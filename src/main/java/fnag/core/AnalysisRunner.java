@@ -2,9 +2,11 @@ package fnag.core;
 
 import fnag.core.analyse.SalesAnalyser;
 import fnag.core.analyse.result.AnalyseResult;
-import fnag.core.analyse.result.AnalysisResultToStringMapper;
+import fnag.core.analyse.result.AnalyseResultToStringMapper;
 import fnag.core.analyse.topsales.TopSalesAlgorithm;
 import fnag.core.analyse.topseller.TopSellerAlgorithm;
+import fnag.core.repository.AnalysisDataSource;
+import fnag.core.repository.file.SalesFileDataSource;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,10 +24,10 @@ public class AnalysisRunner {
 
         final List<AnalyseResult> analyseResults = salesAnalyser.analyseWith(topSalesAlgorithm, topSellerAlgorithm);
 
-        AnalysisResultToStringMapper mapper = new AnalysisResultToStringMapper(dataSource.getProducts());
+        AnalyseResultToStringMapper resultToStringMapper = new AnalyseResultToStringMapper(dataSource.getProducts());
 
         analyseResults.stream()
-                .map(r -> mapper.map(r))
+                .map(resultToStringMapper::map)
                 .forEach(System.out::println);
     }
 }

@@ -1,7 +1,6 @@
 package fnag.core.sale;
 
 import fnag.core.UnParsableStringException;
-import fnag.core.sale.Sale;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
@@ -20,7 +19,7 @@ public class SaleMapper {
             throw new UnParsableStringException("impossible to transform string to product. " +
                     "There should be 4 parameters");
         }
-        // TODO make a builder
+
         return new Sale(values[0], values[1], values[2], Integer.valueOf(values[3]));
     }
 }
