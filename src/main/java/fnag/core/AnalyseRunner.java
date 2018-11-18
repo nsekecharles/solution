@@ -11,7 +11,7 @@ import fnag.core.repository.file.SalesFileDataSource;
 import java.io.IOException;
 import java.util.List;
 
-public class AnalysisRunner {
+public class AnalyseRunner {
 
     public static void main(String[] args) throws IOException {
 
