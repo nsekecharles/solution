@@ -1,7 +1,5 @@
 language: java
 jdk:
   - oraclejdk11
-script:
-  - gradle codeCoverageReport
 after_success:
   - bash <(curl -s https://codecov.io/bash)
