@@ -19,6 +19,6 @@ matrix:
 
 script:
 # Display Gradle, Groovy, JVM and other versions
-  - gradle --version
+  - gradle --version --stacktrace
 # Run all tests
-  - gradle test
+  - gradle test --stacktrace
