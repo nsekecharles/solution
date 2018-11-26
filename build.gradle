@@ -2,6 +2,7 @@ group 'fnag-test'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'jacoco'
 
 compileJava   {
   sourceCompatibility = 11
@@ -22,3 +23,12 @@ dependencies {
                 'io.cucumber:cucumber-junit:4.2.0',
                 'org.assertj:assertj-core:3.6.2'
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+check.dependsOn jacocoTestReport
