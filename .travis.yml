@@ -19,7 +19,7 @@ before_script:
   - export GRADLE_HOME=$PWD/gradle-4.10
   - export PATH=$GRADLE_HOME/bin:$PATH
 script:
-  - gradle test
+  - gradle jacocoTestReport
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
