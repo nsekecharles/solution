@@ -8,3 +8,4 @@ before_script:
 script:
 # Display Gradle, Groovy, JVM and other versions
   - gradle --version --stacktrace
+  - java --version
