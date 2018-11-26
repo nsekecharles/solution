@@ -6,5 +6,6 @@ before_script:
   - unzip gradle-4.10-bin.zip
   - export GRADLE_HOME=$PWD/gradle-4.10
   - export PATH=$GRADLE_HOME/bin:$PATH
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+script:
+# Display Gradle, Groovy, JVM and other versions
+  - gradle --version --stacktrace
