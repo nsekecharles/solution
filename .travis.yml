@@ -6,9 +6,6 @@ before_script:
   - export GRADLE_HOME=$PWD/gradle-4.10
   - export PATH=$GRADLE_HOME/bin:$PATH
 script:
-# Display Gradle, Groovy, JVM and other versions
-  - gradle --version --stacktrace
-  - java --version
   - gradle jacocoTestReport
 after_success:
   - bash <(curl -s https://codecov.io/bash)
