@@ -4,6 +4,10 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'jacoco'
 
+jacoco {
+     toolVersion = "latest.release"
+}
+
 sourceCompatibility = 11
 targetCompatibility = 11
 
